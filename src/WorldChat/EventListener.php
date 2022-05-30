@@ -30,7 +30,7 @@ class EventListener implements Listener {
 		$recipients = $event->getRecipients();
 		foreach($recipients as $key => $recipient){
 			if($recipient->getWorld() != $player->getWorld()){
-				if($recipient->getLevel() != $player->getLevel()){
+				if($recipient->getWorld() != $player->getWorld()){
 					unset($recipients[$key]);
 				}
 			}
